@@ -65,10 +65,10 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="mx-auto h-full flex flex-col items-center justify-center text-center px-6 max-w-screen-xl">
-        <Image src="/images/band-logo.png" alt="The Samo logo" width={64} height={64} className="object-contain mb-4 drop-shadow-md" />
-
-        <h1 className="hero-title text-5xl md:text-6xl font-extrabold text-cream drop-shadow-xl mb-2" aria-live="polite">The Samo</h1>
+      <div className="mx-auto h-full flex flex-col items-center justify-center text-center px-6 max-w-screen-xl transform translate-y-24 md:translate-y-36">
+        {/* Larger logo for hero (keeps small logo above for symmetry) */}
+        <Image src="/images/band-logo.png" alt="The Samo logo" width={220} height={80} className="object-contain mb-4 drop-shadow-md" />
+        <h1 className="sr-only">The Samo</h1>    
         <p className="hero-subtitle mt-0 text-muted max-w-2xl text-lg md:text-xl font-light mb-6 drop-shadow" style={{textShadow: '0 2px 8px rgba(0,0,0,0.32)'}}>Rambling Shout, Chaotic Rock — Hailing from Malang, ID</p>
 
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 justify-center items-center w-full max-w-xs mx-auto">

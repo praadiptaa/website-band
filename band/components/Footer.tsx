@@ -24,9 +24,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <Image src="/images/band-logo.png" alt="The Samo logo" width={56} height={56} className="object-contain" />
+              <Image src="/images/band-logo.png" alt="The Samo logo" width={120} height={48} className="object-contain" />
               <div>
-                <h3 className="text-lg font-semibold">The Samo</h3>
                 <p className="text-sm text-muted">Rambling Shout, Chaotic Rock — Malang, ID</p>
               </div>
             </div>

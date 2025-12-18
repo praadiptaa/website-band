@@ -22,11 +22,11 @@ export default function Navbar() {
         </Link>
 
         <nav className="space-x-5 text-sm">
-          <Link href="#home" className="hover:text-primary transition">Home</Link>
-          <Link href="#about" className="hover:text-primary transition">About</Link>
-          <Link href="#music" className="hover:text-primary transition">Music</Link>
-          <Link href="#tour" className="hover:text-primary transition">Tour</Link>
-          <Link href="#contact" className="hover:text-primary transition">Contact</Link>
+          <Link href="/" className="hover:text-primary transition">Home</Link>
+          <Link href="/about" className="hover:text-primary transition">About</Link>
+          <Link href="/music" className="hover:text-primary transition">Music</Link>
+          <Link href="/tour" className="hover:text-primary transition">Tour</Link>
+          <Link href="/contact" className="hover:text-primary transition">Contact</Link>
         </nav>
       </div>
     </header>

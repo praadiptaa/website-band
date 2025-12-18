@@ -30,19 +30,19 @@ export default function FeaturedReleases() {
 
   return (
     <section id="music" className="py-12">
-      <div className="container mx-auto">
+      <div className="max-w-screen-xl mx-auto">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-3xl md:text-4xl font-extrabold text-cream">Featured Releases</h2>
-          <p className="text-muted hidden sm:block">New & selected works — mastered for late-night listening.</p>
+          <p className="text-muted hidden lg:block">New & selected works — mastered for late-night listening.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           {albums.map((r, idx) => (
             <article key={r.id} className="relative group rounded-2xl overflow-hidden transform transition-all duration-400 hover:-translate-y-2 hover:shadow-2xl">
               <div className="p-[1px] rounded-2xl bg-gradient-to-br from-white/5 to-white/3">
-                <div className="bg-[rgba(255,255,255,0.02)] rounded-xl p-6 flex gap-6 items-center">
+                <div className="bg-[rgba(255,255,255,0.02)] rounded-xl p-6 flex flex-col lg:flex-row gap-6 items-start">
 
-                  <div className="w-44 h-44 md:w-52 md:h-52 relative flex-shrink-0 rounded-lg overflow-hidden shadow-2xl">
+                  <div className="w-full h-64 lg:w-52 lg:h-52 relative flex-shrink-0 rounded-lg overflow-hidden shadow-2xl">
                     <Image src={r.image} alt={`${r.name} cover`} fill className="object-cover" />
 
                     {/* Play overlay */}
@@ -57,11 +57,11 @@ export default function FeaturedReleases() {
 
                   <div className="flex-1">
                     <div className="flex items-center gap-3">
-                      <h3 className="text-2xl font-semibold text-cream">{r.name}</h3>
+                      <h3 className="text-2xl md:text-3xl font-semibold text-cream">{r.name}</h3>
                       <span className="ml-auto inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-black/30 text-muted">{r.release_date}</span>
                     </div>
 
-                    <p className="text-muted mt-3 max-w-xl">A powerful release that showcases the band’s range — atmospherics, grit, and memorable hooks suited for late-night listening.</p>
+                    <p className="text-muted mt-3">A powerful release that showcases the band’s range — atmospherics, grit, and memorable hooks suited for late-night listening.</p>
 
                     <div className="mt-6 flex items-center gap-3">
                       <Button href={r.spotify ?? '#'} external variant="primary" className="px-6 py-3">
