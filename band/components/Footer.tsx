@@ -34,13 +34,13 @@ export default function Footer() {
             <p className="text-sm text-muted max-w-sm">Catch our latest releases and tour dates. Follow us for behind-the-scenes and exclusive drops.</p>
 
             <div className="flex items-center gap-3">
-              <a href="https://open.spotify.com/artist/1t1eZu4FSD62zDYeCnfGVU" target="_blank" rel="noopener noreferrer" aria-label="Spotify" className="text-cream hover:text-accent">
+              <a href="https://open.spotify.com/intl-id/artist/1t1eZu4FSD62zDYeCnfGVU?si=jQQP_Y2pQ0CXfkeUucl48g" target="_blank" rel="noopener noreferrer" aria-label="Spotify" className="text-cream hover:text-accent">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
                   <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.9 14.7c-.2.3-.5.4-.8.3-2.2-.9-4.9-1.1-8.3-0.7-.4.1-.8-.2-.9-.6-.1-.4.2-.8.6-.9 3.8-.4 6.8-.2 9.4.9.3.1.5.4.5.8 0 .3-.1.6-.5.9zM17 10.2c-.2.3-.6.4-.9.3-1.6-.6-3.8-.8-6.7-.6-.4 0-.7-.3-.8-.7-.1-.4.2-.8.6-.9 3-.2 5.5 0 7.5.8.3.1.4.4.3.9zM15 7.2c-.1.4-.5.6-.9.5-1.9-.6-4.7-.7-7.1-.4-.5.1-.9-.2-1-.7-.1-.4.2-.9.7-1 2.6-.3 5.3-.2 7.7.5.4.1.7.6.6 1.1z" />
                 </svg>
               </a>
 
-              <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-cream hover:text-accent">
+              <a href="https://www.instagram.com/thesamo__/?igsh=anFqNGtsbTlzaGxr#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-cream hover:text-accent">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden>
                   <rect x="3" y="3" width="18" height="18" rx="5" strokeWidth="1.5" />
                   <path d="M16 11.37a4 4 0 1 1-7.999-.001A4 4 0 0 1 16 11.37z" strokeWidth="1.5" />
@@ -87,8 +87,8 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 pt-6 border-t border-white/5 flex flex-col md:flex-row items-center justify-between text-sm text-muted">
-          <div>© {new Date().getFullYear()} The Samo — Built with <span aria-hidden>❤️</span></div>
-          <div className="mt-3 md:mt-0">Designed & maintained by <a href="https://github.com/praadiptaa" target="_blank" rel="noopener noreferrer" className="text-cream hover:text-accent">Pomi</a></div>
+          <div>© {new Date().getFullYear()} The Samo. All Rights Reserved.</div>
+          <div className="mt-3 md:mt-0">Designed & maintained by <a href="https://github.com/praadiptaa" target="_blank" rel="noopener noreferrer" className="text-cream hover:text-accent">Dipta Isya</a></div>
         </div>
       </div>
     </footer>
