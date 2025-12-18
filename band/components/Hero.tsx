@@ -8,7 +8,7 @@ import Button from './Button'
 const slides = [
   { id: 'band-1', image: '/images/band-photo.jpeg', alt: 'The Samo live' },
   { id: 'band-2', image: '/images/band-photo2.JPG', alt: 'The Samo live 2' },
-  { id: 'band-3', image: '/images/band-photo3.jpg', alt: 'The Samo live 3' }
+  { id: 'band-3', image: '/images/band-photo3.jpeg', alt: 'The Samo live 3' }
 ]
 
 export default function Hero() {
