@@ -7,6 +7,11 @@ export const metadata = {
   title: 'The Samo',
   description: 'Official site for The Samo',
   themeColor: '#0b0b0b',
+  icons: {
+    icon: '/images/band-logo.png',
+    shortcut: '/images/band-logo.png',
+    apple: '/images/band-logo.png'
+  },
   openGraph: {
     images: ['https://i.scdn.co/image/ab676161000051741e59328f4658dbefde1ba074']
   }
