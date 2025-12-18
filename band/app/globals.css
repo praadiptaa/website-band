@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #__next {
+  height: 100%;
+}
+
+body {
+  /* Dark background inspired by album art */
+  @apply bg-dark text-cream;
+  background-image: linear-gradient(180deg, rgba(11,11,11,1) 0%, rgba(34,12,10,1) 100%);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  @apply max-w-4xl mx-auto;
+}
+
+/* utility helper for muted text */
+.text-muted {
+  color: theme('colors.muted');
+}
+
+/* Navbar transparent-to-solid on scroll */
+.navbar-base {
+  transition: background-color 220ms ease, box-shadow 220ms ease, backdrop-filter 220ms ease;
+}
+.navbar-transparent {
+  background: transparent;
+}
+.navbar-solid {
+  background: rgba(11,11,11,0.9);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.45);
+}
+
+/* Ensure focused CTAs are visible */
+.button-focus:focus {
+  outline: 2px solid rgba(217,162,118,0.7);
+  outline-offset: 3px;
+}
+
+/* Slider controls */
+.slider-button {
+  @apply w-10 h-10 rounded-full bg-black/40 text-cream flex items-center justify-center hover:bg-black/60 transition-shadow;
+}
+.slider-button:focus {
+  outline: 2px solid rgba(217,162,118,0.7);
+}
+
+.slider-dots {
+  @apply flex gap-2 items-center justify-center;
+}
+.slider-dot {
+  @apply w-3 h-3 rounded-full bg-[rgba(255,255,255,0.18)] cursor-pointer;
+}
+.slider-dot-active {
+  @apply bg-primary;
+}
+
+/* Hero animations & cinematic overlay */
+.hero-title {
+  animation: fadeUp 800ms cubic-bezier(.2,.9,.2,1) both;
+}
+.hero-subtitle {
+  animation: fadeUp 1000ms cubic-bezier(.2,.9,.2,1) both;
+  opacity: 0.95;
+}
+
+.slide {
+  transform: scale(1.02);
+  transition: transform 9000ms ease;
+}
+.slide-active {
+  transform: scale(1);
+}
+
+.animated-overlay {
+  background: linear-gradient(120deg, rgba(11,11,11,0.6) 0%, rgba(184,31,31,0.06) 40%, rgba(11,11,11,0.78) 100%);
+  background-size: 200% 200%;
+  animation: gradientShift 12s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Glass card for embeds and sections */
+.glass-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.04);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+}
