@@ -11,7 +11,7 @@ export default function Music() {
 
         {/* Hero */}
         <header className="relative rounded-2xl overflow-hidden shadow-2xl">
-          <div className="relative h-96 md:h-[520px]">
+          <div className="relative h-72 md:h-[520px]">
             <Image src="/images/band-photo3.jpeg" alt="The Samo live" fill className="object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col items-center justify-center text-center px-6">
               <Image src="/images/band-logo.png" alt="The Samo logo" width={240} height={80} className="object-contain mb-4" />

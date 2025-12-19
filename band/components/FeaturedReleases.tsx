@@ -46,7 +46,7 @@ export default function FeaturedReleases() {
               <div className="p-[1px] rounded-2xl bg-gradient-to-br from-white/5 to-white/3">
                 <div className="bg-[rgba(255,255,255,0.02)] rounded-xl p-6 flex flex-col lg:flex-row gap-6 items-start">
 
-                  <div className="w-full h-64 lg:w-52 lg:h-52 relative flex-shrink-0 rounded-lg overflow-hidden shadow-2xl">
+                  <div className="w-full h-52 lg:w-52 lg:h-52 relative flex-shrink-0 rounded-lg overflow-hidden shadow-2xl">
                     <Image src={r.image} alt={`${r.name} cover`} fill className="object-cover transform transition-transform duration-700 ease-out group-hover:scale-105 will-change-transform" />
 
                     {/* Play overlay */}

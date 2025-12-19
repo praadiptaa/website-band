@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 navbar-base navbar-solid bg-gradient-to-tr from-dark to-brown">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div className="max-w-screen-xl mx-auto px-4 py-4 flex justify-between items-center">
         <Link href="/" className="flex items-center">
           <Image src="/images/band-logo.png" alt="The Samo logo" width={56} height={56} className="object-contain md:w-[84px] md:h-[84px]" />
         </Link>
@@ -61,6 +61,7 @@ export default function Navbar() {
           <Link href="/about" className="block rounded-md px-3 py-2 hover:bg-white/5">About</Link>
           <Link href="/music" className="block rounded-md px-3 py-2 hover:bg-white/5">Music</Link>
           <Link href="/video" className="block rounded-md px-3 py-2 hover:bg-white/5">Video</Link>
+          <Link href="/merchandise" className="block rounded-md px-3 py-2 hover:bg-white/5">Merch</Link>
           <Link href="/contact" className="block rounded-md px-3 py-2 hover:bg-white/5">Contact</Link>
         </nav>
       </div>

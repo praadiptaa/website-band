@@ -46,7 +46,7 @@ export default function MerchandisePage() {
         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {products.map(p => (
             <article key={p.id} className="bg-[rgba(255,255,255,0.02)] rounded-2xl p-6 shadow-lg flex flex-col items-stretch animate-in">
-              <div className="w-full h-44 relative mb-4 overflow-hidden rounded-lg glass-card flex items-center justify-center">
+              <div className="w-full h-36 sm:h-44 relative mb-4 overflow-hidden rounded-lg glass-card flex items-center justify-center">
                 <Image src={p.image} alt={p.name} fill className="object-contain p-6" />
               </div>
 
@@ -56,32 +56,36 @@ export default function MerchandisePage() {
               </div>
 
               {(p as any).sizes ? (
-                <div className="mt-4 space-y-3 w-full">
-                  <label htmlFor={`size-${p.id}`} className="text-sm text-muted">Size</label>
-                  <select
-                    id={`size-${p.id}`}
-                    value={sizes[p.id]}
-                    onChange={(e) => setSizes(prev => ({ ...prev, [p.id]: e.target.value }))}
-                    className="mt-1 block w-full bg-black/20 border border-white/10 text-cream rounded px-3 py-2"
-                    aria-label={`Pilih ukuran untuk ${p.name}`}
-                  >
-                    {(p as any).sizes.map((s: string) => <option key={s} value={s}>{s}</option>)}
-                  </select>
+                <div className="mt-4 w-full">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div>
+                      <label htmlFor={`size-${p.id}`} className="text-sm text-muted">Size</label>
+                      <select
+                        id={`size-${p.id}`}
+                        value={sizes[p.id]}
+                        onChange={(e) => setSizes(prev => ({ ...prev, [p.id]: e.target.value }))}
+                        className="mt-1 block w-full bg-black/20 border border-white/10 text-cream rounded px-3 py-2"
+                        aria-label={`Pilih ukuran untuk ${p.name}`}
+                      >
+                        {(p as any).sizes.map((s: string) => <option key={s} value={s}>{s}</option>)}
+                      </select>
+                    </div>
 
-                  <div>
-                    <label htmlFor={`qty-${p.id}`} className="text-sm text-muted">Jumlah</label>
-                    <input
-                      id={`qty-${p.id}`}
-                      type="number"
-                      min={1}
-                      value={quantities[p.id]}
-                      onChange={(e) => setQuantities(prev => ({ ...prev, [p.id]: Math.max(1, Number(e.target.value) || 1) }))}
-                      className="mt-1 w-24 bg-black/20 border border-white/10 text-cream rounded px-3 py-2"
-                      aria-label={`Jumlah pesanan untuk ${p.name}`}
-                    />
+                    <div>
+                      <label htmlFor={`qty-${p.id}`} className="text-sm text-muted">Jumlah</label>
+                      <input
+                        id={`qty-${p.id}`}
+                        type="number"
+                        min={1}
+                        value={quantities[p.id]}
+                        onChange={(e) => setQuantities(prev => ({ ...prev, [p.id]: Math.max(1, Number(e.target.value) || 1) }))}
+                        className="mt-1 w-full sm:w-24 bg-black/20 border border-white/10 text-cream rounded px-3 py-2"
+                        aria-label={`Jumlah pesanan untuk ${p.name}`}
+                      />
+                    </div>
                   </div>
 
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between mt-3">
                     <div className="font-medium text-cream">{p.price}</div>
                     <a href={buildWhatsAppLink(p.name, sizes[p.id], quantities[p.id])} target="_blank" rel="noreferrer" aria-label={`Order ${p.name} on WhatsApp`} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary to-primary-600 text-cream">Order</a>
                   </div>
@@ -96,7 +100,7 @@ export default function MerchandisePage() {
                       min={1}
                       value={quantities[p.id]}
                       onChange={(e) => setQuantities(prev => ({ ...prev, [p.id]: Math.max(1, Number(e.target.value) || 1) }))}
-                      className="mt-1 w-24 bg-black/20 border border-white/10 text-cream rounded px-3 py-2"
+                      className="mt-1 w-full sm:w-24 bg-black/20 border border-white/10 text-cream rounded px-3 py-2"
                       aria-label={`Jumlah pesanan untuk ${p.name}`}
                     />
                   </div>
