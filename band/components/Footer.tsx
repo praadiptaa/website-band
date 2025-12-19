@@ -48,6 +48,7 @@ export default function Footer() {
             <h4 className="text-sm font-semibold uppercase tracking-wide text-muted mb-3">Explore</h4>
             <ul className="space-y-2">
               <li><Link href="/music" className="text-cream hover:text-accent">Music</Link></li>
+              <li><Link href="/merchandise" className="text-cream hover:text-accent">Merch</Link></li>
               <li><Link href="/video" className="text-cream hover:text-accent">Video</Link></li>
               <li><Link href="/about" className="text-cream hover:text-accent">About</Link></li>
               <li><Link href="/contact" className="text-cream hover:text-accent">Contact</Link></li>

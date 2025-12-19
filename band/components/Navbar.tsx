@@ -29,6 +29,7 @@ export default function Navbar() {
           <Link href="/about" className="hover:text-primary transition">About</Link>
           <Link href="/music" className="hover:text-primary transition">Music</Link>
           <Link href="/video" className="hover:text-primary transition">Video</Link>
+          <Link href="/merchandise" className="hover:text-primary transition">Merch</Link>
           <Link href="/contact" className="hover:text-primary transition">Contact</Link>
           <Button href="/music" variant="primary" className="ml-4">Listen</Button>
         </nav>
