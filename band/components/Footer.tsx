@@ -2,21 +2,10 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
 import Button from './Button'
 
 export default function Footer() {
-  const [email, setEmail] = useState('')
-  const [subscribed, setSubscribed] = useState(false)
 
-  const onSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!email) return
-    // no backend — just show a success state
-    setSubscribed(true)
-    setEmail('')
-    setTimeout(() => setSubscribed(false), 4000)
-  }
 
   return (
     <footer className="bg-gradient-to-tr from-dark to-brown text-cream border-t border-white/5">
@@ -66,22 +55,15 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wide text-muted mb-3">Join the list</h4>
-            <p className="text-sm text-muted mb-4">Get news and tour dates. No spam — promise.</p>
+            <h4 className="text-sm font-semibold uppercase tracking-wide text-muted mb-3">Stay connected</h4>
+            <p className="text-sm text-muted mb-4">Follow us for updates, releases, and behind-the-scenes — no spam.</p>
 
-            <form onSubmit={onSubmit} className="flex gap-2">
-              <input
-                type="email"
-                aria-label="Email address"
-                placeholder="you@domain.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="flex-1 px-4 py-2 rounded-full bg-white/5 placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-accent"
-              />
-              <Button className="rounded-full" variant="primary">Join</Button>
-            </form>
+            <div className="flex gap-3 flex-wrap">
+              <a href="https://linktr.ee/thesamo" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 text-cream hover:bg-white/5 transition">Join on Linktree</a>
+              <a href="https://open.spotify.com/artist/1t1eZu4FSD62zDYeCnfGVU" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary to-primary-600 text-cream">Follow on Spotify</a>
+            </div>
 
-            {subscribed && <div className="mt-3 text-sm text-accent">Thanks — check your inbox!</div>}
+            <div className="mt-3 text-sm text-muted">Prefer not to share email? You can always follow us on streaming platforms and socials for news.</div>
           </div>
         </div>
 

@@ -96,7 +96,7 @@ export default function EnigmaPage() {
 
               <div>
                 <dt className="font-medium text-cream">Contact</dt>
-                <dd>Prana — <a href="tel:+6285330221874" className="text-cream hover:underline">+62 853-3022-1874</a>, <a href="mailto:thesamogolt@gmail.com" className="text-cream hover:underline">thesamogolt@gmail.com</a></dd>
+                <dd>Angke — <a href="tel:+6285330221874" className="text-cream hover:underline">+62 853-3022-1874</a>, <a href="mailto:thesamogolt@gmail.com" className="text-cream hover:underline">thesamogolt@gmail.com</a></dd>
               </div>
 
               <div>
