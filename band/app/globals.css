@@ -90,10 +90,67 @@ body {
 }
 
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(8px); }
+  from { opacity: 0; transform: translateY(6px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Page entrance helpers (snappier, softer) */
+.animate-in {
+  animation: fadeUp 480ms cubic-bezier(.22,.9,.3,1) both;
+}
+.animate-in-slow {
+  animation: fadeUp 720ms cubic-bezier(.22,.9,.3,1) both;
+}
+
+/* Stagger children for lists and grids (tighter spacing)
+   uses 0.03s increments for a denser entrance */
+.stagger > * {
+  opacity: 0;
+  transform: translateY(6px);
+  animation: fadeUp 520ms cubic-bezier(.22,.9,.3,1) both;
+}
+.stagger > *:nth-child(1) { animation-delay: 0.03s }
+.stagger > *:nth-child(2) { animation-delay: 0.06s }
+.stagger > *:nth-child(3) { animation-delay: 0.09s }
+.stagger > *:nth-child(4) { animation-delay: 0.12s }
+.stagger > *:nth-child(5) { animation-delay: 0.15s }
+.stagger > *:nth-child(6) { animation-delay: 0.18s }
+.stagger > *:nth-child(7) { animation-delay: 0.21s }
+.stagger > *:nth-child(8) { animation-delay: 0.24s }
+
+/* Small fade/scale for imagery */
+.scale-in {
+  transform-origin: center center;
+  animation: scaleIn 520ms cubic-bezier(.22,.9,.3,1) both;
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.985); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Ripple effect for buttons */
+.ripple {
+  position: absolute;
+  border-radius: 9999px;
+  transform: scale(0);
+  background: rgba(255,255,255,0.12);
+  opacity: 1;
+  pointer-events: none;
+  animation: ripple 600ms cubic-bezier(.2,.8,.2,1) both;
+}
+@keyframes ripple {
+  to { transform: scale(2.8); opacity: 0; }
+}
+
+/* Reduced motion — respect user preference: turn off non-essential animation */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 /* Glass card for embeds and sections */
 .glass-card {
   background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));

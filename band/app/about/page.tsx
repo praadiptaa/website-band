@@ -77,7 +77,7 @@ export default function About() {
 
             <div className="flex flex-wrap gap-3">
               <Button href="/music" variant="primary" className="w-full sm:w-auto">Listen</Button>
-              <Button href="/tour" variant="outline" className="w-full sm:w-auto">Tour</Button>
+              <Button href="/video" variant="outline" className="w-full sm:w-auto">Watch</Button>
               <Link href="/contact" className="inline-flex items-center gap-2 px-4 py-3 rounded-full border border-white/10 text-cream hover:bg-white/3 transition">Press / Booking</Link>
             </div>
           </div>

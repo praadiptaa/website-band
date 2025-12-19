@@ -63,8 +63,8 @@ export default function Home() {
 
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-5">
                       <div>
-                        <h3 className="text-xl md:text-2xl font-semibold text-cream">Enigma — 2025</h3>
-                        <p className="text-sm text-muted mt-1">Featured release — atmospheric, intense, and refined.</p>
+                        <h3 className="text-xl md:text-2xl font-semibold text-cream">Enigma — 2025 (EP)</h3>
+                        <p className="text-sm text-muted mt-1">2025 EP — released Sep 13, 2025. A mythic quest to heal Samogolt with ominous, cinematic sound design and whistling motifs.</p>
                         <div className="mt-3 flex gap-3">
                           <a href="https://open.spotify.com/album/6qzSr5y2DvWZsHw39m7zqd" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary to-primary-600 text-cream shadow-md hover:scale-105 transition-transform">
                             <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">

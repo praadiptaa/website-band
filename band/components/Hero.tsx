@@ -73,7 +73,7 @@ export default function Hero() {
 
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 justify-center items-center w-full max-w-xs mx-auto">
           <Button href="/music" variant="primary" className="w-full sm:w-auto">Listen</Button>
-          <Button href="/tour" variant="outline" className="w-full sm:w-auto">Tour</Button>
+          <Button href="/video" variant="outline" className="w-full sm:w-auto">Watch</Button>
         </div>
 
         {/* Dots */}
